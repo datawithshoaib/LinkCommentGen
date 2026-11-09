@@ -1,0 +1,29 @@
+[project]
+name = "linkcomment-backend"
+version = "0.1.0"
+description = "LangGraph + Groq backend that generates LinkedIn comment options"
+authors = [
+    { name = "Shoaib Akthar", email = "shaikshoaibakthar363@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.2",
+    "langchain>=1.4.9",
+    "langchain-core>=1.7.6",
+    "langchain-groq>=1.1.3",
+    "langgraph>=1.2.20",
+    "pydantic-settings>=2.16.2",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

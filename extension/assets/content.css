@@ -1,0 +1,25 @@
+@import "./tailwind.css";
+
+/*
+ * LinkedIn changes the root font-size, which would distort rem-based sizes
+ * inside our Shadow DOM. Pin the scale to px for the in-page panel.
+ */
+@theme {
+  --spacing: 4px;
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+}
+
+:host {
+  all: initial;
+  display: block;
+  --radius: 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
